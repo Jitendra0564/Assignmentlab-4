@@ -1,0 +1,64 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace lolypop
+{
+    internal class Program
+
+    {
+        public int balance;
+       public  int Balance
+        {
+            get
+            {
+                return balance;
+            }
+            set
+            {
+                if(value < 0)
+                {
+                    throw new Exception("Balance Cannot be Nagative");
+                }
+                else
+                {
+                    balance = value;
+                }
+            }
+        }
+        public void withdwral(int x)
+        {
+            if(this.balance < x)
+            {
+                Console.WriteLine("Your Bank Balance isn't  sufficient for withdrwal the amount");
+            }
+            else if(this.balance==x){
+                 balance -= x; }
+            else
+            {
+               balance -= x;
+            }
+        }
+
+
+        static void Main(string[] args)
+        {
+
+            int y,g;
+        Program obj = new Program();
+        Console.WriteLine("Enter Amount to deposit");
+        g = int.Parse(Console.ReadLine());
+
+        obj.Balance = g;
+        Console.WriteLine(obj.Balance);
+         Console.WriteLine("Enter amount For withdral");
+            y = int.Parse(Console.ReadLine());
+            obj.withdwral(y);
+            Console.WriteLine(obj.Balance);
+            Console.Read();
+
+        }
+    }
+}

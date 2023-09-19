@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ques_three
+{
+    internal class Program
+    {
+        public string fname, lname;
+        public string Person
+        {
+            get
+            {
+                return (fname.ToUpper()+" "+lname.ToUpper());
+            }
+            set
+            {
+                fname= value;
+                lname = value;
+            }
+        }
+        static void Main(string[] args)
+        {
+            string fn, ln;
+            Console.WriteLine("Enter first name");
+            fn = Console.ReadLine();
+            Console.WriteLine("Enter last name");
+            ln= Console.ReadLine();
+            Program obj = new Program();
+            obj.fname = fn;
+            obj.lname = ln;
+            Console.WriteLine(obj.Person);
+            Console.Read();
+        }
+    }
+}

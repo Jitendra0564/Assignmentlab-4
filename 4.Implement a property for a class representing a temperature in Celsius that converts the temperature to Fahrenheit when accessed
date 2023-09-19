@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ques_fourth
+{
+    internal class Program
+    {
+        public double temprature;
+        public double Temprature
+        {
+            get
+            {
+                return ((1.8 * temprature) + 32);
+            }
+            set
+            {
+                temprature = value;
+            }
+        }
+        static void Main(string[] args)
+        {
+            double cel;
+            cel= Double.Parse(Console.ReadLine());
+            Program obj = new Program();
+            obj.temprature = cel;
+            Console.WriteLine( obj.Temprature);
+            Console.Read();
+        }
+    }
+}
